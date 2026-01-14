@@ -1,2 +1,93 @@
+# --- Основное (из вашего текущего файла) ---
 *.apk
 service_account.json
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.env
+.venv
+env/
+venv/
+ENV/
+build/
+dist/
+*.egg-info/
+.eggs/
+.coverage
+htmlcov/
+.pytest_cache/
+
+# --- C/C++ и Autotools (для gnubg_engine) ---
+# Объектные файлы и библиотеки
+*.o
+*.lo
+*.la
+*.a
+*.obj
+
+# Временные файлы Autotools и конфигурации
+.deps/
+.libs/
+autom4te.cache/
+aclocal.m4
+config.guess
+config.sub
+config.log
+config.status
+config.h
+config.h.in
+configure
+compile
+depcomp
+install-sh
+libtool
+ltmain.sh
+missing
+stamp-h1
+ylwrap
+Makefile
+Makefile.in
+
+# Исполняемые файлы (бинарники), которые собираются в проекте
+gnubg_engine/gnubg
+gnubg_engine/bearoffdump
+gnubg_engine/makebearoff
+gnubg_engine/makehyper
+gnubg_engine/makeweights
+# Если есть другие скомпилированные утилиты без расширения
+gnubg_engine/text2gnubg
+gnubg_engine/gnubg-cli
+
+# Сгенерированная документация (если не нужно хранить)
+*.info
+*.pdf
+*.html
+
+# --- IDE и Редакторы ---
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+
+# --- Android Studio & Gradle (Дополнение) ---
+.gradle/
+local.properties
+.cxx/
+.externalNativeBuild/
+captures/
+*.aab
+*.hprof
+*.keystore
+*.jks
+*.properties
+!gradle-wrapper.properties
+# Конфиги Google Services (если будут использоваться)
+google-services.json
