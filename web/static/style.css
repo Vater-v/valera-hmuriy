@@ -1,0 +1,240 @@
+:root {
+    /* PALETTE: Valera Hmuriy Theme */
+    --bg-color: #181614;       /* Earthy Dark */
+    --surface: #26221F;        /* Rotten Wood */
+    --surface-light: #36302C;  /* Highlight */
+    --accent: #A85E65;         /* Withered Rose */
+    --accent-dark: #381212;    /* Dried Blood */
+    --text-main: #E3DAC9;      /* Old Bone */
+    --text-sec: #8F8A82;       /* Ash Gray */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 440px; /* Узкая колонка для фокуса внимания */
+    display: flex;
+    flex-direction: column;
+    gap: 50px; /* Чуть увеличил отступ между блоками для удобства чтения */
+}
+
+/* --- Header --- */
+.main-header {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: var(--text-main);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.divider {
+    height: 2px;
+    background-color: var(--accent);
+    width: 60px;
+    margin-top: 15px;
+    opacity: 0.7;
+}
+
+/* --- Step Blocks --- */
+.step-block {
+    background-color: transparent; 
+}
+
+.step-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.step-num {
+    font-family: monospace;
+    color: var(--accent);
+    font-size: 1.1rem;
+    font-weight: bold;
+    background: var(--surface);
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: var(--text-main);
+}
+
+.description {
+    color: var(--text-sec);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+strong {
+    color: var(--accent);
+    font-weight: 500;
+}
+
+em {
+    font-style: italic;
+    color: var(--text-sec);
+    opacity: 0.8;
+}
+
+/* --- Buttons --- */
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.btn-primary {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 14px;
+    background-color: var(--surface);
+    color: var(--text-main);
+    text-decoration: none;
+    border: 1px solid var(--surface-light);
+    border-radius: 6px;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background-color: var(--surface-light);
+    transform: translateY(-1px);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+    background-color: var(--accent-dark);
+}
+
+/* --- Images & Instructions --- */
+.instruction-item {
+    margin-bottom: 35px;
+}
+
+.instruction-item:last-child {
+    margin-bottom: 0;
+}
+
+.image-wrapper {
+    width: 100%;
+    background-color: var(--surface);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--surface-light);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    opacity: 0.9;
+    transition: opacity 0.3s;
+}
+
+.image-wrapper img:hover {
+    opacity: 1;
+}
+
+/* --- Status Badge --- */
+.status-check {
+    background-color: var(--surface);
+    padding: 15px;
+    border-radius: 6px;
+    border-left: 3px solid var(--accent);
+    margin-top: 15px;
+}
+
+.status-check p {
+    color: var(--text-sec);
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+}
+
+.status-check p:last-child {
+    margin-bottom: 0;
+}
+
+.status-badge {
+    display: inline-block;
+    background-color: rgba(168, 94, 101, 0.15); 
+    color: var(--accent);
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+/* --- Footer --- */
+.main-footer {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.btn-telegram {
+    display: block;
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto 30px auto;
+    padding: 12px;
+    background-color: transparent;
+    color: var(--accent);
+    text-decoration: none;
+    border: 1px solid var(--accent);
+    border-radius: 50px; /* Делаем кнопку круглой (pill shape) */
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.btn-telegram:hover {
+    background-color: var(--accent);
+    color: var(--bg-color);
+    box-shadow: 0 0 15px rgba(168, 94, 101, 0.3);
+}
+
+.footer-sign {
+    color: var(--surface-light);
+    font-size: 0.8rem;
+    font-family: monospace;
+    line-height: 1.8;
+}
+
+.meme-text {
+    color: var(--text-sec);
+    font-style: italic;
+    opacity: 0.5;
+    font-size: 0.75rem;
+}

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valera Hmuriy // Setup</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        
+        <header class="main-header">
+            <h1>Протокол настройки</h1>
+            <div class="divider"></div>
+        </header>
+
+        <section class="step-block">
+            <div class="step-header">
+                <span class="step-num">01</span>
+                <h2>Инструментарий</h2>
+            </div>
+            <p class="description">Установи модифицированный клиент PPNards и управляющий модуль Valera на целевое устройство.</p>
+
+            <div class="actions">
+                <a href="/download/ppnards-patched.apk" class="btn-primary" onclick="logDownload('ppnards')">
+                    PPNards [Patched]
+                </a>
+                <a href="/download/valera.apk" class="btn-primary" onclick="logDownload('valera')">
+                    Valera Module
+                </a>
+            </div>
+        </section>
+
+        <section class="step-block">
+            <div class="step-header">
+                <span class="step-num">02</span>
+                <h2>Настройка связи</h2>
+            </div>
+            
+            <div class="instruction-item">
+                <p class="description">Разреши приложению <strong>"Поверх других окон"</strong>. Валере нужен визуальный контроль.</p>
+                <div class="image-wrapper">
+                    <img src="/static/Screenshot_1.png" alt="Overlay Permission" loading="lazy">
+                </div>
+            </div>
+
+            <div class="instruction-item">
+                <p class="description">Внеси координаты (IP и Port) в конфигурацию. Нажми <strong>Start</strong>.</p>
+                <div class="image-wrapper">
+                    <img src="/static/Screenshot_2.png" alt="Config Setup" loading="lazy">
+                </div>
+            </div>
+
+            <div class="status-check">
+                <p>Ожидай появления индикатора:</p>
+                <div class="status-badge">Brain Connected</div>
+            </div>
+        </section>
+
+        <section class="step-block">
+            <div class="step-header">
+                <span class="step-num">03</span>
+                <h2>Проверка интеграции</h2>
+            </div>
+
+            <div class="instruction-item">
+                <p class="description">Заходи в приложение <strong>PPNards</strong>. Ты должен увидеть новый виджет. Если он есть — значит всё в порядке.</p>
+                <div class="image-wrapper">
+                    <img src="/static/Screenshot_3.png" alt="Widget Verification" loading="lazy">
+                </div>
+                <br>
+                <p class="description">Далее следует вход/регистрация аккаунта. Проходим, идём дальше.</p>
+            </div>
+        </section>
+
+        <section class="step-block">
+            <div class="step-header">
+                <span class="step-num">04</span>
+                <h2>Идентификация</h2>
+            </div>
+
+            <div class="instruction-item">
+                <p class="description">
+                    Попроси технического представителя открыть серверный лог, чтобы узнать <strong>ID</strong> твоего аккаунта.
+                    <br><br>
+                    <em>Примечание: Сейчас бот играть не будет, требуется его донастройка.</em>
+                </p>
+                
+                <p class="description">Техническая информация в логах выглядит так:</p>
+                
+                <div class="image-wrapper">
+                    <img src="/static/Screenshot_4.png" alt="Server Log View 1" loading="lazy">
+                </div>
+                <div class="image-wrapper" style="margin-top: 10px;">
+                    <img src="/static/Screenshot_5.png" alt="Server Log View 2" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <section class="step-block">
+            <div class="step-header">
+                <span class="step-num">05</span>
+                <h2>Первый запуск</h2>
+            </div>
+
+            <div class="instruction-item">
+                <p class="description">
+                    Как только получен ответ от тех. специалиста — <strong>всё готово</strong>. Поздравляю! Можем начинать.
+                </p>
+                <p class="description">Пробуем зайти за стол с короткими нардами:</p>
+
+                <div class="image-wrapper">
+                    <img src="/static/Screenshot_6.png" alt="Gameplay Start" loading="lazy">
+                </div>
+                
+                <div class="status-check">
+                    <p>Статус:</p>
+                    <div class="status-badge" style="color: #E3DAC9;">Успешно!</div>
+                    <p style="margin-top: 8px;">Мы видим подсказки от мозга. Бот сам выполняет действия: бросает кубики, делает ходы.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="step-block">
+            <div class="step-header">
+                <span class="step-num">06</span>
+                <h2>Важные нюансы</h2>
+            </div>
+
+            <div class="instruction-item">
+                <p class="description">
+                    <strong>1. Панель управления</strong><br>
+                    Нажми на круглый виджет, чтобы раскрыть меню. Там есть тумблер <strong>"Automation"</strong> (включен по умолчанию).
+                </p>
+                <p class="description">
+                    Когда он <em>ON</em> — бот сам нажимает "Accept" для продолжения игры/матча. Если нужно выйти из-за стола — <strong>выключи тумблер</strong>.
+                </p>
+                <div class="image-wrapper">
+                    <img src="/static/Screenshot_7.png" alt="Automation Toggle" loading="lazy">
+                </div>
+            </div>
+
+            <div class="instruction-item">
+                <p class="description">
+                    <strong>2. Настройки стола</strong><br>
+                    Критически важно, чтобы подтверждение хода было отключено:
+                </p>
+                <div class="image-wrapper">
+                    <img src="/static/Screenshot_8.png" alt="Game Settings" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <footer class="main-footer">
+            <div class="divider" style="margin: 0 auto 30px auto; opacity: 0.3;"></div>
+            
+            <p class="description" style="text-align: center;">По всем вопросам:</p>
+            
+            <a href="https://t.me/vaurr" target="_blank" class="btn-telegram">
+                Telegram: @vaurr
+            </a>
+
+            <div class="footer-sign">
+                Valera Hmuriy 2026
+                <br>
+                <span class="meme-text">"Lucky is not a strategy."</span>
+            </div>
+        </footer>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
